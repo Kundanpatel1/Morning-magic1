@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moringa Magic® | #1 USA Health Solution | 75% OFF Today!</title>
+    <meta name="description" content="Moringa Magic: The #1 natural supplement for Americans over 35. Boost energy, relieve joint pain, strengthen immunity, and lose weight. 75% OFF + Free Shipping Now!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2A5D23;
+            --secondary: #FFD700;
+            --accent: #FF4500;
+            --text-white: #fff;
+            --highlight: #00C4B4;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background: var(--primary);
+            color: var(--text-white);
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .live-activity {
+            background: #FFF3CD;
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 2px solid var(--secondary);
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        .hero {
+            background: linear-gradient(rgba(42,93,35,0.9), rgba(42,93,35,0.7)), url('https://images.unsplash.com/photo-1591453089846-0f339731a0e5');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-white);
+            padding: 60px 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+        .hero h3 {
+            font-size: 1.6em;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+        .limited-offer {
+            background: var(--highlight);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .cta-button, .watch-button, .buy-now {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin: 15px 0;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .cta-button:hover, .watch-button:hover, .buy-now:hover {
+            background: var(--accent);
+            color: var(--text-white);
+            transform: translateY(-2px);
+        }
+        .watch-button {
+            font-size: 1.3em;
+            padding: 15px 30px;
+            background: linear-gradient(90deg, var(--secondary), #FFC107);
+        }
+        .buy-now {
+            background: var(--accent);
+            color: var(--text-white);
+            font-size: 1.6em;
+            padding: 20px 40px;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            width: 90%;
+            max-width: 400px;
+        }
+        .guarantee-badge {
+            background: var(--text-white);
+            color: var(--primary);
+            padding: 12px 20px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 0.9em;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .guarantee-badge i {
+            margin-right: 8px;
+        }
+        .countdown {
+            background: var(--accent);
+            color: var(--text-white);
+            padding: 15px;
+            font-size: 1.6em;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 10px;
+            animation: flash 1.5s infinite;
+        }
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        .video-section {
+            padding: 40px 20px;
+            background: #fff;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .video-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .weight-loss-section {
+            padding: 40px 20px;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        .weight-loss-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .weight-loss-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 300px;
+        }
+        .weight-loss-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .weight-loss-card p {
+            padding: 15px;
+            font-weight: bold;
+        }
+        .benefits-section {
+            padding: 40px 20px;
+            background: #fff;
+            text-align: center;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+        .benefit-card {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        .benefit-card i {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .testimonials-section {
+            padding: 40px 20px;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        .testimonial-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px auto;
+            max-width: 650px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .testimonial-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .scientific-section {
+            background: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .footer {
+            background: #333;
+            color: var(--text-white);
+            padding: 20px;
+            text-align: center;
+            font-size: 0.85em;
+        }
+        .footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background: var(--text-white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 500px;
+            position: relative;
+        }
+        .popup-content .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .hero h3 { font-size: 1.2em; }
+            .cta-button, .watch-button { font-size: 1.2em; padding: 15px 25px; }
+            .buy-now { font-size: 1.3em; padding: 15px 30px; }
+            .countdown { font-size: 1.2em; }
+            .video-section h2, .weight-loss-section h2 { font-size: 1.5em; }
+            .benefit-card, .testimonial-card { padding: 15px; }
+            .testimonial-card { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Live Counter -->
+    <div class="header">
+        ⚡ <span id="orderCounter">1283</span> Americans Ordered Today | Stock: <span style="color:var(--secondary)">Only <span id="stock">47</span> Left!</span>
+    </div>
+
+    <!-- Live Purchase Notifications -->
+    <div class="live-activity">
+        🛒 <span id="livePurchases">James from California just bought 2 bottles!</span>
+    </div>
+
+    <!-- Main Hero Section -->
+    <div class="hero">
+        <h1>🇺🇸 Moringa Magic: #1 Natural Solution for Americans Over 35</h1>
+        <h3>Boost Energy, Relieve Joint Pain, Strengthen Immunity, and Lose Weight!</h3>
+        <div class="limited-offer">Limited Offer: 75% OFF Today Only!</div>
+        <img src="file_00000000c78c61f7868d723a6dca4216" alt="Moringa Magic Product" style="max-width: 600px; margin: 20px auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <a href="https://www.officialmoringamagic.com/home-video?aff=Nitesh9" class="watch-button">
+            <i class="fas fa-play-circle"></i> Watch Now to Start Losing Weight
+        </a>
+        <div class="countdown">
+            ⏳ 75% OFF + Free Shipping Ends In: <span id="timer">29:59</span>
+        </div>
+        <a href="https://www.officialmoringamagic.com/home-video?aff=Nitesh9" class="cta-button">
+            🔥 Order Now and Save 75% →
+        </a>
+        <div class="guarantee-badge">
+            <i class="fas fa-shield-alt"></i> 365-Day Money-Back Guarantee
+        </div>
+        <div class="guarantee-badge">
+            <i class="fas fa-flag-usa"></i> Made in USA, FDA-Approved Facility
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+        <h2>Discover the Power of Moringa Magic</h2>
+        <p>Watch how Americans are losing weight and transforming their health!</p>
+        <a href="https://www.officialmoringamagic.com/home-video?aff=Nitesh9" class="watch-button">
+            <i class="fas fa-play-circle"></i> See Weight Loss Results Now
+        </a>
+    </div>
+
+    <!-- Weight Loss Results Section -->
+    <div class="weight-loss-section">
+        <h2>Real Weight Loss Transformations</h2>
+        <div class="weight-loss-grid">
+            <div class="weight-loss-card">
+                <img src="file_00000000f414622fa8117841f1e69787.png" alt="Before Weight Loss">
+                <p>Before: 180 lbs</p>
+            </div>
+            <div class="weight-loss-card">
+                <img src="file_00000000f414622fa8117841f1e69787.png" alt="After Weight Loss">
+                <p>After: 165 lbs in 8 Weeks!</p>
+            </div>
+        </div>
+        <a href="https://www.officialmoringamagic.com/home-video?aff=Nitesh9" class="cta-button">Start Your Weight Loss Journey →</a>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="benefits-section">
+        <h2>Why Choose Moringa Magic?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-bolt fa-2x"></i>
+                <h3>Boosts Energy</h3>
+                <p>Feel vibrant and active all day with natural power.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-running fa-2x"></i>
+                <h3>Relieves Joint Pain</h3>
+                <p>Move freely with reduced inflammation.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-shield-virus fa-2x"></i>
+                <h3>Strengthens Immunity</h3>
+                <p>Stay healthy with a stronger immune system.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-weight fa-2x"></i>
+                <h3>Supports Weight Loss</h3>
+                <p>Lose up to 15 lbs in 8 weeks naturally!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials-section">
+        <h2>Real Stories from Real Americans</h2>
+        <div class="testimonial-card">
+            <img src="https://via.placeholder.com/60x60?text=Linda" alt="Linda">
+            <div>
+                <p>“I lost 12 lbs in 6 weeks, my energy is back, and my joints feel amazing!”</p>
+                <p><strong>– Linda, 38, Florida</strong> <i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i></p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="https://via.placeholder.com/60x60?text=John" alt="John">
+            <div>
+                <p>“Dropped 15 lbs, BP is normal, and I feel 20 years younger. Highly recommend!”</p>
+                <p><strong>– John, 42, Texas</strong> <i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i></p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="https://via.placeholder.com/60x60?text=Sarah" alt="Sarah">
+            <div>
+                <p>“Lost 10 lbs in a month and my immunity is stronger than ever!”</p>
+                <p><strong>– Sarah, 37, California</strong> <i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i></p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="https://via.placeholder.com/60x60?text=Mike" alt="Mike">
+            <div>
+                <p>“I shed 18 lbs in 10 weeks and my joints don’t ache anymore!”</p>
+                <p><strong>– Mike, 45, Ohio</strong> <i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i></p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="https://via.placeholder.com/60x60?text=Emily" alt="Emily">
+            <div>
+                <p>“Lost 8 lbs and gained so much energy for my daily workouts!”</p>
+                <p><strong>– Emily, 39, New York</strong> <i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i></p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="https://via.placeholder.com/60x60?text=David" alt="David">
+            <div>
+                <p>“Dropped 14 lbs in 7 weeks and feel healthier overall!”</p>
+                <p><strong>– David, 41, Arizona</strong> <i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i><i class="fas fa-star" style="color:gold;"></i></p>
+            </div>
+        </div>
+        <a href="https://www.officialmoringamagic.com/home-video?aff=Nitesh9" class="cta-button">Join 45,000+ Happy Users →</a>
+    </div>
+
+    <!-- Scientific Proof Section -->
+    <div class="scientific-section">
+        <h2>🔬 Proven by Science</h2>
+        <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+            <img src="https://via.placeholder.com/100x50?text=Harvard" alt="Harvard" style="height:50px;">
+            <img src="https://via.placeholder.com/100x50?text=FDA" alt="FDA" style="height:50px;">
+            <img src="https://via.placeholder.com/100x50?text=NIH" alt="NIH" style="height:50px;">
+        </div>
+        <p style="max-width:800px;margin:20px auto;">“Moringa Oleifera significantly improves cardiovascular health, reduces inflammation, and supports healthy weight loss.” – Journal of American Nutrition</p>
+        <a href="https://www.officialmoringamagic.com/home-video?aff=Nitesh9" class="cta-button">Get Your Discount Before It’s Gone →</a>
+    </div>
+
+    <!-- Fixed Buy Now Button -->
+    <a href="https://www.officialmoringamagic.com/home-video?aff=Nitesh9" class="buy-now">💥 Start Losing Weight – Save 75%!</a>
+
+    <!-- Exit Intent Popup -->
+    <div class="popup" id="exitPopup">
+        <div class="popup-content">
+            <span class="close" onclick="document.getElementById('exitPopup').style.display='none'">×</span>
+            <h2>Wait! Don’t Leave Empty-Handed!</h2>
+            <p>Get an <strong>EXTRA 10% OFF</strong> + Free Shipping if you order now!</p>
+            <a href="https://www.officialmoringamagic.com/home-video?aff=Nitesh9" class="cta-button">Claim Your Offer Now →</a>
+        </div>
+    </div>
+
+    <!-- Compliance Footer -->
+    <div class="footer">
+        <p>*These statements have not been evaluated by the FDA. Results may vary.</p>
+        <p>© 2025 Moringa Magic | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a></p>
+    </div>
+
+    <script>
+        // Real-Time Updates
+        let orderCount = 1283;
+        let stock = 47;
+        setInterval(() => {
+            orderCount += Math.floor(Math.random() * 5) + 1;
+            stock = Math.max(5, stock - Math.floor(Math.random() * 3));
+            document.getElementById('orderCounter').textContent = orderCount;
+            document.getElementById('stock').textContent = stock;
+        }, 10000);
+
+        const purchases = [
+            "James from California just bought 2 bottles!",
+            "Emily from New York grabbed a 6-month supply!",
+            "Robert from Texas ordered 3 bottles + free shipping!",
+            "Lisa from Ohio secured her discount!"
+        ];
+        let purchaseIndex = 0;
+        setInterval(() => {
+            document.getElementById('livePurchases').textContent = purchases[purchaseIndex % purchases.length];
+            purchaseIndex++;
+        }, 3000);
+
+        // Countdown Timer
+        let time = 29 * 60 + 59;
+        const timerElement = document.getElementById('timer');
+        const timer = setInterval(() => {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            time--;
+            if (time < 0) time = 15 * 60; // Reset to 15 minutes for sustained urgency
+        }, 1000);
+
+        // Exit Intent Popup
+        let popupShown = false;
+        document.addEventListener('mouseout', (e) => {
+            if (!popupShown && !e.relatedTarget && e.clientY < 10) {
+                document.getElementById('exitPopup').style.display = 'flex';
+                popupShown = true;
+            }
+        });
+
+        // Lazy Load Images
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => img.setAttribute('loading', 'lazy'));
+        });
+    </script>
+</body>
+</html>
